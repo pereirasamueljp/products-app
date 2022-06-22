@@ -1,0 +1,7 @@
+.productsSection{
+    display: flex;
+    flex-wrap: wrap;
+    app-product{
+        flex-basis: 25%;
+    }
+}

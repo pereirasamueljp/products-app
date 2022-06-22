@@ -1,0 +1,54 @@
+<div class="product">
+    <mat-card class="card" *ngIf="product.id">
+        <div class="header">
+            <mat-card-header >
+                <mat-card-title (click)="showProduct()" style="text-transform: capitalize; cursor: pointer; ">{{product.title}}</mat-card-title>
+                <mat-card-subtitle matTooltip="{{product.description}}" class="subtitle">{{product.description}}</mat-card-subtitle>
+            </mat-card-header>
+        </div>
+        <div class="img">
+            <img mat-card-image (click)="openImageDialog()"  style="cursor: pointer;" src="{{product.thumbnail}}" alt="Photo of a Shiba Inu">
+        </div>
+        <!-- <mat-card-content>
+          <p>
+            {{product.description}}
+          </p>
+        </mat-card-content> -->
+        <div class="actionsGrid">
+            <mat-card-actions class="actions" *ngIf="product.colors">
+                <div class="colorsSection">
+                    <label>COLORS</label>
+                    <div>
+                        <button id="{{product.id+color}}" class="colors" *ngFor="let color of product.colors" (click)="setColorByClick(color)"
+                            mat-mini-fab style="background-color: {{color}};">
+                        </button>
+                    </div>
+                </div>
+                <div class="measureSelect">
+                    <mat-form-field appearance="fill" [appearance]="'outline'">
+                        <mat-label class="measureName">{{product.measureName}}</mat-label>
+                        <mat-select (ngModel)="measure" name="measure" disableRipple>
+                            <mat-option *ngFor="let measure of product.measure" [value]="measure">
+                                {{measure}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </mat-card-actions>
+        </div>
+        <div class="buttonsGrid">
+            <mat-card-actions class="actionButtons">
+                <button mat-button (click)="addToCart()">
+                    <mat-icon>shopping_basket</mat-icon>
+                </button>
+                <button mat-button (click)="favorite()">
+                    <mat-icon  id="{{product.id}}favorite" >favorite</mat-icon>
+                </button>
+                <button mat-button (click)="share()">
+                    <mat-icon>share</mat-icon>
+                </button>
+                <button mat-raised-button color="primary" class="buy" (click)="buy()">BUY</button>
+            </mat-card-actions>
+        </div>
+    </mat-card>
+</div>

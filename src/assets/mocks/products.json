@@ -1,0 +1,211 @@
+[
+    {
+        "id": 1,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Ração",
+        "shortDescription": "Um teste qualquer",
+        "availableQuantity": 0,
+        "description": "",
+        "thumbnail": " https://material.angular.io/assets/img/examples/shiba2.jpg",
+        "images": [
+            "https://material.angular.io/assets/img/examples/shiba2.jpg"
+        ],
+        "measureName": "Weight",
+        "measure": [
+            "Kg",
+            "gm"
+        ],
+        "price": 0,
+        "colors": [
+            "#808080",
+            "#228b22",
+            "#f5f5f5",
+            "#ff7c00"
+        ]
+    }
+]
+
+

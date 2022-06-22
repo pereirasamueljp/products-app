@@ -1,0 +1,9 @@
+<section class="productsSection">
+    <app-product *ngFor="let product of products " [product]="product"></app-product>
+</section>
+<mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+<mat-paginator [length]="resultsLength"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>

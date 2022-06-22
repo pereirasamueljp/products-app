@@ -1,0 +1,46 @@
+<!-- <section>
+    <mat-card class="example-card" *ngIf="product.id">
+        <mat-card-header (click)="showProduct()">
+            <mat-card-title>{{product.title}}</mat-card-title>
+            <mat-card-subtitle>{{product.shortDescription}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image  (click)="showProduct()" src="{{product.image}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{product.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="actions" *ngIf="product.colors">
+            <div class="colorsSection">
+                <label>COLORS</label>
+                <div>
+                    <button id="{{color}}" class="colors" *ngFor="let color of product.colors" (click)="setColorByClick(color)"
+                        mat-mini-fab style="background-color: {{color}};">
+                    </button>
+                </div>
+            </div>
+            <div class="measureSelect" *ngIf="product.measureName">
+                <mat-form-field appearance="fill" [appearance]="'outline'">
+                    <mat-label class="measureName">{{product.measureName}}</mat-label>
+                    <mat-select (ngModel)="measure" name="measure" disableRipple>
+                        <mat-option *ngFor="let measure of product.measure" [value]="measure">
+                            {{measure}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </mat-card-actions>
+        <mat-card-actions class="actionButtons">
+            <button mat-button (click)="addToCart()">
+                <mat-icon>shopping_basket</mat-icon>
+            </button>
+            <button mat-button (click)="favorite()">
+                <mat-icon  id="favorite" >favorite</mat-icon>
+            </button>
+            <button mat-button (click)="share()">
+                <mat-icon>share</mat-icon>
+            </button>
+            <button mat-raised-button color="primary" class="buy" (click)="buy()">BUY</button>
+        </mat-card-actions>
+    </mat-card>
+</section> -->
