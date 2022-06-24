@@ -7,7 +7,9 @@ import { ProductModule } from 'src/app/components/product/product.module';
 import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { HttpClientModule } from '@angular/common/http';
-import { FakeService } from 'src/app/services/fake.service';
+import { ProductEventsService } from 'src/app/services/productEvents.service';
+import { ProductService } from 'src/app/services/product.service';
+
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { FakeService } from 'src/app/services/fake.service';
   ],
   providers: [
     RouterModule,
-    FakeService
+    ProductEventsService,
+    ProductService
   ]
 })
 export class ProductsModule { }

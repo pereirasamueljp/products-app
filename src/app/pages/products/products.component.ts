@@ -2,10 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { BehaviorSubject, catchError, map, merge, Observable, of, startWith, switchMap } from 'rxjs';
-import { FakeService } from 'src/app/services/fake.service';
-import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/shared/models/product.model';
-
+import { ProductEventsService } from 'src/app/services/productEvents.service';
+import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -22,16 +21,16 @@ export class ProductsComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
 
-  constructor(private productService: ProductService,private fakeService: FakeService) {
-    this.productService.productsEmit.subscribe(value => {
+  constructor(private productEventsService: ProductEventsService,private productService: ProductService) {
+    this.productEventsService.productsEmit.subscribe((value: any) => {
       if (value.canISentProducts === false) this.products = value.products;
     })
     let canSentProducts = true;
-    this.productService.productsEmit.emit({ canISentProducts: canSentProducts });
+    this.productEventsService.productsEmit.emit({ canISentProducts: canSentProducts });
   }
 
-  getProducts(limit: number): Observable<Product[]>{
-    return this.fakeService.getProducts(limit);
+  getProducts(limit: number,skip: number): Observable<Product[]>{
+    return this.productService.getProducts(limit,skip);
   }
   ngAfterViewInit(): void {
     merge(this.paginator!.page)
@@ -39,7 +38,7 @@ export class ProductsComponent implements AfterViewInit {
         startWith({}),
         switchMap(() => {
           this.isLoadingResults = true;
-          return this.getProducts(this.paginator!.pageIndex).pipe(catchError(() => of(null)));
+          return this.getProducts(25,this.paginator!.pageIndex).pipe(catchError(() => of(null)));
         }),
         map((data: any) => {
           this.isLoadingResults = false;

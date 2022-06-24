@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ProductService } from './services/product.service';
+import { ProductEventsService } from './services/productEvents.service';
 import { Product } from './shared/models/product.model';
 
 @Component({
@@ -128,12 +128,12 @@ export class AppComponent {
     colors: ['#808080', '#228b22', '#f5f5f5', '#ff7c00']
   }]
 
-  constructor(private productService: ProductService) {
-    this.productService.buyEvent.subscribe((teste: any) => {
+  constructor(private productEventsService: ProductEventsService) {
+    this.productEventsService.buyEvent.subscribe((teste: any) => {
       console.log(teste)
     })
-    this.productService.productsEmit.subscribe((value) => {
-      if (value.canISentProducts === true) this.productService.productsEmit.emit({canISentProducts: false, products: this.products })
+    this.productEventsService.productsEmit.subscribe((value) => {
+      if (value.canISentProducts === true) this.productEventsService.productsEmit.emit({canISentProducts: false, products: this.products })
     })
   }
 }

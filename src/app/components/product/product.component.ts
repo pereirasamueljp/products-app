@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { ProductService } from 'src/app/services/product.service';
+import { ProductEventsService } from 'src/app/services/productEvents.service';
 import { Product } from 'src/app/shared/models/product.model';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 
@@ -36,7 +36,7 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private productService: ProductService,
+    private productEventsService: ProductEventsService,
     public imageDialog: MatDialog
   ) { }
 
@@ -45,7 +45,7 @@ export class ProductComponent implements OnInit {
   }
 
   buy() {
-    this.productService.buyEvent.emit({ id: this.product.id, measureName: this.product.measureName, measure: this.measure, color: this.color })
+    this.productEventsService.buyEvent.emit({ id: this.product.id, measureName: this.product.measureName, measure: this.measure, color: this.color })
   }
 
   setColorByClick(color: string) {
@@ -68,21 +68,21 @@ export class ProductComponent implements OnInit {
     this.color = color
   }
   share() {
-    this.productService.shareEvent.emit(this.router.url + `${this.product.id}`)
+    this.productEventsService.shareEvent.emit(this.router.url + `${this.product.id}`)
   }
   favorite() {
     let element = document.getElementById(`${this.product.id}favorite`);
     if (element!.style.color == 'rgb(255, 0, 0)') {
       console.log(element)
-      this.productService.favoriteEvent.emit({ id: this.product.id, favorite: false })
+      this.productEventsService.favoriteEvent.emit({ id: this.product.id, favorite: false })
       element!.style.color = '#000000';
       return;
     }
-    this.productService.favoriteEvent.emit({ id: this.product.id, favorite: true })
+    this.productEventsService.favoriteEvent.emit({ id: this.product.id, favorite: true })
     element!.style.color = '#FF0000'
   }
   addToCart() {
-    this.productService.addToCartEvent.emit({ id: this.product.id, measureName: this.product.measureName, measure: this.measure, color: this.color })
+    this.productEventsService.addToCartEvent.emit({ id: this.product.id, measureName: this.product.measureName, measure: this.measure, color: this.color })
   }
   showProduct() {
     this.router.navigate([`product`, { id: this.product.id }])
